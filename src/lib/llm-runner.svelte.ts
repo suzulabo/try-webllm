@@ -66,7 +66,7 @@ return
             result.progressText = 'Loaded'
 
             const messages = [
-                { role: 'user', content: prompt },
+                { role: 'user' as const, content: prompt },
             ]
 
             const completion = await engine.chat.completions.create({
